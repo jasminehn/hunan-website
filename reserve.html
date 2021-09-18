@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hunan Coventry</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hunan.css">
+
+    <script>
+        function save_data() {
+            sessionStorage.full_name = full_name.value;
+            sessionStorage.num_ppl = num_ppl.value;
+            sessionStorage.phone_num = phone_num.value;
+            sessionStorage.res_date = res_date.value;
+            sessionStorage.res_time = res_time.value;
+            sessionStorage.event = event.value;
+        }
+    </script>
+</head>
+
+<style>
+    p {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    
+    
+
+    header {
+        display: flex;
+        justify-content: center;
+        background-image: url(images/Zhangjiajie-National-Park-Hunan-China.jpeg);
+        background-repeat: no-repeat;
+        background-position: center;
+        animation-name: fadein;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+        width: 100%;
+        
+    }
+    
+    h2 {
+        width: 100%;
+    }
+    
+    #res_form label {
+        margin-top: 1em;
+    }
+    
+    #buttons {
+        margin-left: 3em;
+        margin-top: 0.8em;
+        padding-bottom: 1em;
+    }
+    
+    @keyframes fadein {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+    
+    @keyframes changecolor {
+        from{color: black;}
+        to{color: white;}
+    }
+    
+    h2 {
+        animation-name: changecolor;
+        animation-duration: 7s;
+        animation-fill-mode: forwards;
+    }
+</style>
+
+<div id="services">
+    <a href="find.html"><img src=images/icon-lupe-hannover.png width="15" height="13">FIND A LOCATION</a>
+    <a href="https://bit.ly/2zjDlHv"><img src=images/chinese-takeout.png width="20" height="20">ORDER ONLINE</a>
+    <a href="reserve.html"><img src=images/share-inv.png width="15" height="15">RESERVATIONS</a>
+</div>
+
+<div id="wtop">
+    <nav>
+        <a href="index.html">Home</a> &nbsp;
+        <a href="menus.html">Menus</a> &nbsp;
+        <a href="hours.html">Hours & Locations</a> &nbsp;
+        <a href="about.html">About</a>
+    </nav>
+</div>
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <h2>Make a Reservation</h2>
+        </header>
+
+        <main>
+            <p>Please fill out this form with your name, number, amount of people in your party, and reservation date and time. </p>
+
+            <form id="res_form" method="get" action="rescomplete.html" onsubmit="save_data()">
+
+                <div class="form_row">
+                    <div class="form_column">
+                        <label for="full_name">Name: </label>
+                        <input id="full_name" id="full_name" required="required">
+
+                        <label for="phone_num">Phone: </label>
+                        <input type="text" name="phone_num" id="phone_num" required="required">
+
+                        <label for="num_ppl"># of People: </label>
+                        <input type="number" name="num_ppl" id="num_ppl" min="0" max="15" value="0" required="required">
+                    </div>
+
+                    <div class="form_column">
+                        <label for="res_date">Reservation date: </label>
+                        <input type="date" name="res_date" id="res_date" required="required">
+
+                        <label for="res_time">Reservation time: </label>
+                        <input type="time" name="res_time" id="res_time" required="required">
+
+                        <label for="event">Type of event: </label>
+                        <input type="text" name="event" id="event" list="evlist">
+                        <datalist id="evlist">
+                            <option>Solo meal</option>
+                            <option>Dinner date</option>
+                            <option>Birthday celebration</option>
+                            <option>Party</option>
+                        </datalist>
+                    </div>
+                </div>
+                <div id="buttons">
+                    <input type="submit" value="Submit">
+                    <input type="reset">
+                </div>
+            </form>
+        </main>
+
+    </div>
+    <footer>
+        Copyright &copy; Jasmine Nelson<br>
+        <a href="mailto:jnelson20@jcu.edu">jnelson20@jcu.edu</a>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,454 @@
+body {
+    background-color: #241F20;
+    color: #000000;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+#wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    min-width: 1000px;
+    max-width: 1280px;
+}
+
+.form_column {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.form_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#menu_wrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    min-width: 1000px;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+}
+
+/* Top nav */
+#services {
+    background-color: #241F20;
+    height: 40px;
+    font-size: 20px;
+    font-family: Verdana;
+    color: #D8D8D8;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Top nav links */
+#services a {
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Verdana;
+    color: #D8D8D8;
+    padding-top: 10px;
+}
+
+/* Top nav links hover*/
+#services a:hover {
+    color: #9C4529;
+}
+
+/* Top nav icons*/
+#services img {
+    padding-right: 5px;
+}
+
+/* Main nav container*/
+#wtop {
+    background-color: #2E2A2B;
+    background-image: url(images/hunan_logo.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 75px;
+}
+
+header {}
+
+h2 {
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+    color: #ffffff;
+    font-size: 22px;
+    font-family: Verdana;
+    padding-right: 1.5em;
+    padding-top: 1.2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #9C4529;
+    color: white;
+    font-size: small;
+    text-align: center;
+    padding: 1em;
+}
+
+footer a {
+
+    color: white;
+    font-size: 12px;
+}
+
+#menus {
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    text-align: center;
+    width: 260px;
+    height: auto;
+    font-size: 30px;
+}
+
+#menus a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em;
+    border-bottom: 1px solid white;
+}
+
+#menus a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.items {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+    margin: 0.5em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.items img {
+    max-width: 200px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.menu_items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.container {
+    position: relative;
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 9px;
+    height: 92%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #9C4529;
+}
+
+.container:hover .overlay {
+    opacity: 0.9;
+}
+
+
+
+#reswrapper {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(images/Zhangjiajie-National-Park-Hunan-China.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 1000px;
+    max-width: 1280px;
+}
+
+#hl-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes grow {
+    from {
+        width: 60px;
+        height: 40px;
+    }
+
+    to {
+        width: 70px;
+        height: 50px;
+    }
+}
+
+.wok {
+    animation-name: grow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1900px;
+
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+/* The dots */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 2s;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.slideshow-container img {
+    height: 200;
+}
+
+main {}
+
+img {}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        height: 10em;
+        margin-bottom: 1em;
+    }
+
+    #wtop {
+        height: 240px;
+    }
+
+    #menu_wrapper {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        min-width: 690px;
+        max-width: 900px;
+    }
+
+    #hl-flex {
+
+        flex-direction: column;
+    }
+
+    #wrapper {
+        margin: 0;
+        padding: 0;
+        width: auto;
+        min-width: 700px;
+        max-width: 900px;
+    }
+
+    main iframe {
+
+        min-width: 500px;
+        max-width: 700px;
+        width: auto;
+    }
+
+    #reswrapper {
+        width: auto;
+        margin: auto;
+        padding: 0;
+
+        min-width: 700px;
+        max-width: 900px;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    #wtop {
+        background-image: none;
+        height: 200px;
+    }
+
+    nav {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    nav a {}
+
+
+
+    #wrapper {
+        min-width: 400px;
+        max-width: 700px;
+    }
+
+    #reswrapper {
+        min-width: 400px;
+        max-width: 700px;
+    }
+
+    #menu_wrapper {
+        min-width: 390px;
+        max-width: 650px;
+    }
+
+    #services a {
+        font-size: 12px;
+    }
+
+    #menus {
+        font-size: 22px;
+    }
+
+    .items {
+        flex-basis: 100px;
+    }
+
+    .items img {
+        max-width: 100px;
+    }
+
+    .form_column {
+        width: 60%;
+    }
+
+    .form_row {
+        display: flex;
+        flex-direction: column;
+        margin-left: 1em;
+    }
+
+    main iframe {
+        min-width: 300px;
+        max-width: 500px;
+    }
+
+    #gg {
+        font-size: 22px;
+    }
+
+
+}

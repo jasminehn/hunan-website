@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hunan Coventry</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hunan.css">
+
+    <script>
+        function load_data() {
+            thanks.innerHTML = "Your reservation is scheduled for " + sessionStorage.res_date + " at " + sessionStorage.res_time + " for a party of " + sessionStorage.num_ppl + ". We will contact you at " + sessionStorage.phone_num + ".";
+            soon.innerHTML = "See you soon, " + sessionStorage.full_name + "!";
+        }
+    </script>
+</head>
+
+<style>
+    p {
+        padding-left: 1em;
+        padding-right: 1em;
+        color: white;
+        font-size: 1.5em;
+    }
+
+
+    header {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 1.5em;
+    }
+
+    .form_column {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    .form_row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #res_form label {
+        margin-top: 1em;
+    }
+
+    #buttons {
+        margin-left: 3em;
+        margin-top: 0.8em;
+        padding-bottom: 1em;
+    }
+
+    
+</style>
+
+<div id="services">
+    <a href="find.html"><img src=images/icon-lupe-hannover.png width="15" height="13">FIND A LOCATION</a>
+    <a href="https://bit.ly/2zjDlHv"><img src=images/chinese-takeout.png width="20" height="20">ORDER ONLINE</a>
+    <a href="reserve.html"><img src=images/share-inv.png width="15" height="15">RESERVATIONS</a>
+</div>
+
+<div id="wtop">
+    <nav>
+        <a href="index.html">Home</a> &nbsp;
+        <a href="menus.html">Menus</a> &nbsp;
+        <a href="hours.html">Hours & Locations</a> &nbsp;
+        <a href="about.html">About</a>
+    </nav>
+</div>
+
+<body onload="load_data()">
+    <div id="reswrapper">
+
+        <header>
+            <h2>Thank You For Making a Reservation!</h2>
+        </header>
+
+        <main  style="padding-bottom: 0.1em">
+            <p id="thanks"></p>
+            <p id="soon" style="text-align: center"></p>
+        </main>
+
+    </div>
+    <footer>
+        Copyright &copy; Jasmine Nelson<br>
+        <a href="mailto:jnelson20@jcu.edu">jnelson20@jcu.edu</a>
+    </footer>
+</body>
+
+</html>

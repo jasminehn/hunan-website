@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hunan Coventry</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hunan.css">
+</head>
+
+<div id="services">
+    <a href="find.html"><img src=images/icon-lupe-hannover.png width="15" height="13">FIND A LOCATION</a>
+    <a href="https://bit.ly/2zjDlHv"><img src=images/chinese-takeout.png width="20" height="20">ORDER ONLINE</a>
+    <a href="reserve.html"><img src=images/share-inv.png width="15" height="15">RESERVATIONS</a>
+</div>
+
+<div id="wtop">
+    <nav>
+        <a href="index.html">Home</a> &nbsp;
+        <a href="menus.html">Menus</a> &nbsp;
+        <a href="hours.html">Hours & Locations</a> &nbsp;
+        <a href="about.html">About</a>
+    </nav>
+</div>
+
+<body>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src=images/crabrangoons-f.jpeg style="width:100%">
+            <div class="text">Crab Rangoon</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src=images/sweet-sour-chicken-ck-f.jpeg style="width:100%">
+            <div class="text">Sweet & Sour Chicken</div>
+        </div>
+
+        <div class="mySlides fade">
+            <img src=images/potstickers-f.jpeg style="width:100%">
+            <div class="text">Pot Stickers</div>
+        </div>
+
+        
+    </div>
+
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    </script>
+
+    <div id="wrapper">
+        <header>
+
+        </header>
+
+        <main>
+
+
+        </main>
+
+    </div>
+    <br><br>
+    <footer>
+        Copyright &copy; Jasmine Nelson<br>
+        <a href="mailto:jnelson20@jcu.edu">jnelson20@jcu.edu</a>
+    </footer>
+</body>
+
+</html>

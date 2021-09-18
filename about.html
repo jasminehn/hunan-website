@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hunan Coventry</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hunan.css">
+    <script>
+        function hideinfo() {
+            phone.style.display = "block";
+            addy.style.display = "none";
+            rate.style.display = "none";
+            avg.style.display = "none";
+        }
+        
+        function displayinfo() {
+            if (info.value == "Phone") {
+                phone.style.display = "block";
+                addy.style.display = "none";
+                rate.style.display = "none";
+                avg.style.display = "none";
+            }
+            if (info.value == "Address") {
+                phone.style.display = "none";
+                addy.style.display = "block";
+                rate.style.display = "none";
+                avg.style.display = "none";
+            }
+            if (info.value == "Rating") {
+                phone.style.display = "none";
+                addy.style.display = "none";
+                rate.style.display = "block";
+                avg.style.display = "none";
+            }
+            if (info.value == "Avg") {
+                phone.style.display = "none";
+                addy.style.display = "none";
+                rate.style.display = "none";
+                avg.style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<style>
+    p {
+            padding-left: 1em;
+            padding-right: 1em;
+        }
+        
+    header {
+            display: flex;
+            justify-content: center;
+        }
+    
+    #infoform {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    #infoform input {
+        margin-left: 2em;
+    }
+    </style>
+
+<div id="services">
+    <a href="find.html"><img src=images/icon-lupe-hannover.png width="15" height="13">FIND A LOCATION</a>
+    <a href="https://bit.ly/2zjDlHv"><img src=images/chinese-takeout.png width="20" height="20">ORDER ONLINE</a>
+    <a href="reserve.html"><img src=images/share-inv.png width="15" height="15">RESERVATIONS</a>
+</div>
+
+<div id="wtop">
+    <nav>
+        <a href="index.html">Home</a> &nbsp;
+        <a href="menus.html">Menus</a> &nbsp;
+        <a href="hours.html">Hours & Locations</a> &nbsp;
+        <a href="about.html">About</a>
+    </nav>
+</div>
+
+<body onload="hideinfo()">
+    <div id="wrapper">
+        <br>
+        <header>
+            <img class="wok" src="images/hunan-wok.png">
+            &emsp;<h2>About Us</h2>&emsp;
+            <img class="wok" src="images/hunan-wok.png">
+        </header>
+
+        <main>
+            <p>Hunan Coventry is a modest, local Chinese restaurant with a clean and welcoming atmosphere. We are family owned, family run business that has been operating in Cleveland for over 30 years. We serve traditional Hunan cuisine, as well as other Asian-inspired dishes. Our food is not only deicious, but also at a reasonable price. The authentic tastes of our food will make you feel like you are in China! </p>
+            <form id="infoform">
+                <p>More Info:
+                            <select id="info" onchange="displayinfo()">
+                                <option>Phone</option>
+                                <option>Address</option>
+                                <option>Rating</option>
+                                <option value="Avg">Average Time</option>
+                            </select>
+                        </p>
+                <br>
+                <p id="phone"><b>Phone:</b> (216) 371-0777</p>
+            <p id="addy"><b>Address:</b> 1800 Coventry Rd, Cleveland, OH 44118</p>
+            <p id="rate"><b>Rating:</b> 4.1/5 stars (Google Reviews)</p>
+            <p id="avg"><b>Average Time:</b> Customers spend an average of 15 min to 1 hr here</p>
+            </form>
+
+            
+            <br>
+        </main>
+
+    </div>
+    <footer>
+        Copyright &copy; Jasmine Nelson<br>
+        <a href="mailto:jnelson20@jcu.edu">jnelson20@jcu.edu</a>
+    </footer>
+</body>
+
+</html>

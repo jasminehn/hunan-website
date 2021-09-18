@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hunan Coventry</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="hunan.css">
+
+    <script>
+        function hide_days() {
+            sun.style.display = "block";
+            mon.style.display = "none";
+            tue.style.display = "none";
+            wed.style.display = "none";
+            thu.style.display = "none";
+            fri.style.display = "none";
+            sat.style.display = "none";
+        }
+
+        function changeHrs() {
+            if (hrs.value == "Sunday") {
+                sun.style.display = "block";
+                mon.style.display = "none";
+                tue.style.display = "none";
+                wed.style.display = "none";
+                thu.style.display = "none";
+                fri.style.display = "none";
+                sat.style.display = "none";
+            }
+            if (hrs.value == "Monday") {
+                sun.style.display = "none";
+                mon.style.display = "block";
+                tue.style.display = "none";
+                wed.style.display = "none";
+                thu.style.display = "none";
+                fri.style.display = "none";
+                sat.style.display = "none";
+            }
+            if (hrs.value == "Tuesday") {
+                sun.style.display = "none";
+                mon.style.display = "none";
+                tue.style.display = "block";
+                wed.style.display = "none";
+                thu.style.display = "none";
+                fri.style.display = "none";
+                sat.style.display = "none";
+            }
+            if (hrs.value == "Wednesday") {
+                sun.style.display = "none";
+                mon.style.display = "none";
+                tue.style.display = "none";
+                wed.style.display = "block";
+                thu.style.display = "none";
+                fri.style.display = "none";
+                sat.style.display = "none";
+            }
+            if (hrs.value == "Thursday") {
+                sun.style.display = "none";
+                mon.style.display = "none";
+                tue.style.display = "none";
+                wed.style.display = "none";
+                thu.style.display = "block";
+                fri.style.display = "none";
+                sat.style.display = "none";
+            }
+            if (hrs.value == "Friday") {
+                sun.style.display = "none";
+                mon.style.display = "none";
+                tue.style.display = "none";
+                wed.style.display = "none";
+                thu.style.display = "none";
+                fri.style.display = "block";
+                sat.style.display = "none";
+            }
+            if (hrs.value == "Saturday") {
+                sun.style.display = "none";
+                mon.style.display = "none";
+                tue.style.display = "none";
+                wed.style.display = "none";
+                thu.style.display = "none";
+                fri.style.display = "none";
+                sat.style.display = "block";
+            }
+        }
+    </script>
+</head>
+
+<style>
+    #loc-flex {
+        margin-right: 55px;
+        margin-left: 10px;
+    }
+    
+    #hrs-flex {
+        margin-left: 55px;
+    }
+    
+    #loc-flex img{
+        max-width: 500px;
+    }
+    
+    form img {
+        max-width: 311px;
+    }
+    
+    
+@media only screen and (max-width: 700px) {
+    #sss img {
+        max-width: 350px;
+    }
+    }
+</style>
+
+<div id="services">
+    <a href="find.html"><img src=images/icon-lupe-hannover.png width="15" height="13">FIND A LOCATION</a>
+    <a href="https://bit.ly/2zjDlHv"><img src=images/chinese-takeout.png width="20" height="20">ORDER ONLINE</a>
+    <a href="reserve.html"><img src=images/share-inv.png width="15" height="15">RESERVATIONS</a>
+</div>
+
+<div id="wtop">
+    <nav>
+        <a href="index.html">Home</a> &nbsp;
+        <a href="menus.html">Menus</a> &nbsp;
+        <a href="hours.html">Hours & Locations</a> &nbsp;
+        <a href="about.html">About</a> 
+    </nav>
+</div>
+
+<body onload="hide_days()">
+    <div id="wrapper">
+        <header>
+
+        </header>
+
+        <main>
+            <br>
+
+            <div id="hl-flex">
+
+                <div id="loc-flex">
+                    <h2>Location</h2>
+                    <div id="sss"> <img id="slope" src=images/coventry-f.jpeg> </div>
+                    <p style="text-align: center"><b>Address:</b> 1800 Coventry Rd, Cleveland, OH 44118</p>
+                </div>
+                
+                <div id="hrs-flex">
+                    <h2>Hours</h2>
+
+                    <table border="1">
+                        <tr>
+                            <th>Sunday</th>
+                            <td>4PM–8:45PM</td>
+                        </tr>
+                        <tr>
+                            <th>Monday</th>
+                            <td>Closed</td>
+                        </tr>
+                        <tr>
+                            <th>Tuesday</th>
+                            <td rowspan="3">11:30AM–9:45PM</td>
+                        </tr>
+                        <tr>
+                            <th>Wednesday</th>
+                            
+                        </tr>
+                        <tr>
+                            <th>Thursday</th>
+                            
+                        </tr>
+                        <tr>
+                            <th>Friday</th>
+                            <td>11:30AM–10:45PM</td>
+                        </tr>
+                        <tr>
+                            <th>Saturday</th>
+                            <td>12PM–10:45PM</td>
+                        </tr>
+                    </table>
+
+                    <form>
+                        <p>Popular Times:
+                            <select id="hrs" onchange="changeHrs()">
+                                <option>Sunday</option>
+                                <option>Monday</option>
+                                <option>Tuesday</option>
+                                <option>Wednesday</option>
+                                <option>Thursday</option>
+                                <option>Friday</option>
+                                <option>Saturday</option>
+                            </select>
+                        </p>
+                        <p id="sun"><img src="images/sun-time.PNG"></p>
+                        <p id="mon"><img src="images/mon-time.PNG"></p>
+                        <p id="tue"><img src="images/tue-time.PNG"></p>
+                        <p id="wed"><img src="images/wed-time.PNG"></p>
+                        <p id="thu"><img src="images/thu-time.PNG"></p>
+                        <p id="fri"><img src="images/fri-time.PNG"></p>
+                        <p id="sat"><img src="images/sat-time.PNG"></p>
+                    </form>
+
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+    <footer>
+        Copyright &copy; Jasmine Nelson<br>
+        <a href="mailto:jnelson20@jcu.edu">jnelson20@jcu.edu</a>
+    </footer>
+</body>
+
+</html>
